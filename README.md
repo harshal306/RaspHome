@@ -53,8 +53,8 @@ Download the App RaspHome From PlayStore and put the login Credentials into it a
 Just ask what you have written in the IFTTT "if" phrase. "then" phrase automaically be executed.
 
 #### 2. Control your Appliance by RaspHome Web Page
-visit [This page](https://github.com/harshal306/RaspHome/tree/master/Application_Code/Web%20Page/RaspHome_Controller.html) 
-(make sure to enter your Access_Token and Event name)
+visit [This page](http://htmlpreview.github.io/?https://github.com/harshal306/RaspHome/blob/master/Application_Code/Web%20Page/RaspHome_Controller.html) 
+(make sure that your have entered your Access_Token and Event name [here](https://github.com/harshal306/RaspHome/blob/master/Application_Code/Web%20Page/RaspHome_Controller.html))
 
 #### 3. Control your Appliance by RaspHome Android App.
 
