@@ -50,6 +50,15 @@ This is ask you to sign in to the particle account to access cloud.<p>
 ## To Contribute
 
 Clone the repository make your neccesary changes and push into a new branch.
+```
+$ git clone https://github.com/harshal306/RaspHome
+```
+Make Required Changes in the local Repository and then
+```
+$ git checkout -b <name_of_branch>
+$ git checkout <name_of_branch>
+$ git push origin <name_of_branch>
+```
 
 ## Developers and Contributors
 
