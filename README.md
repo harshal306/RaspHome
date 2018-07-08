@@ -15,7 +15,11 @@
 
 #### 1. Particle Setup
 
-``` bash <( curl -sL https://particle.io/install-pi ) ```
+``` bash <( curl -sL https://particle.io/install-pi ) 
+    $ source env/bin/activate
+    $ python -m googlesamples.assistant.grpc.pushtotalk --project-id Your_Project_ID
+```
+For resgistering the model visit [here](console.actions.google.com)
 <p> Write this code in raspberry pi OS Terminal and click Enter!
 This is ask you to sign in to the particle account to access cloud.<p>
 
