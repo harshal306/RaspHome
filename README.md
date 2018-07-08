@@ -30,7 +30,7 @@ This is ask you to sign in to the particle account to access cloud.<p>
   
 #### 3. Circuiting and Wiring
 
-<p> Refer to the Circuit_diagram page <p>
+Refer to the Device Connection page in the repository ![](https://www.iotgadgets.com/wp-content/uploads/2018/02/GoogleAI_Pi-1068x759.png)
   
 ## Execution
 
