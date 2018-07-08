@@ -32,7 +32,7 @@ Build the Application by copying and exceuting the code in Device_App_code.ino t
 
 Refer to the Device Connection page in the repository ![](https://www.iotgadgets.com/wp-content/uploads/2018/02/GoogleAI_Pi-1068x759.png)
   
-## Execution
+## Dependencies
 
 #### 1. Through IFTTT
 
@@ -46,7 +46,20 @@ Check out the HTML page in this repository and change the Access_token to your o
 #### 3. Self-Developed App RaspHome
 
 Download the App RaspHome From PlayStore and put the login Credentials into it and give your Access token and exeucte to control the appliances through Voice commands From any where in the world.
-  
+
+## Execution
+
+#### 1. Control your Appliance by Google Assistant through IFTTT
+Just ask what you have written in the IFTTT "if" phrase. "then" phrase automaically be executed.
+
+#### 2. Control your Appliance by RaspHome Web Page
+visit [This page](https://github.com/harshal306/RaspHome/tree/master/Application_Code/Web%20Page/RaspHome_Controller.html) 
+(make sure to enter your Access_Token and Event name)
+
+#### 3. Control your Appliance by RaspHome Android App.
+
+Work under Construction. would be available before 20th July 2018.
+
 ## To Contribute
 
 Clone the repository make your neccesary changes and push into a new branch.
