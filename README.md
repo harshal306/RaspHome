@@ -16,7 +16,7 @@
 #### 1. Particle Setup
 
 ```
-	bash <( curl -sL https://particle.io/install-pi ) 
+    $ bash <( curl -sL https://particle.io/install-pi ) 
     $ source env/bin/activate
     $ python -m googlesamples.assistant.grpc.pushtotalk --project-id Your_Project_ID
 ```
