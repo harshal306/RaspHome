@@ -1,0 +1,15 @@
+body{
+		
+			padding: 50px;
+			font: 20px Comic Sans MS;
+			color: #CACACA;
+			font-style: italic;
+			background-color: white;
+			background-image: url("Images/iot.jpg");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			background-size: 100%;
+			text-align: center;	
+		
+		}
