@@ -98,8 +98,8 @@ public class Main2Activity extends AppCompatActivity {
                             public Object callApi(@NonNull ParticleCloud harscloud) throws ParticleCloudException, IOException {
                                 harscloud.logIn(email, pass);
                                 harscloud.getDevices();
-                                ParticleCloudSDK.getCloud().setAccessToken("ac82f902d546a19b044e8c7b32c46e73d0a2fea3");
-                                mDevice = harscloud.getDevice("7ab711eb09279cbea70d7936");
+                                ParticleCloudSDK.getCloud().setAccessToken("xxxxxxxxxxxxxxxxxxxxxxxxxx");
+                                mDevice = harscloud.getDevice("xxxxxxxxxxxxxxxxxxxxxxxxxxx");
                                 Object obj;
                                 ParticleCloudSDK.getCloud().publishEvent("Light_On", "",
                                         ParticleEventVisibility.PUBLIC, 60);
@@ -156,8 +156,8 @@ public class Main2Activity extends AppCompatActivity {
                             public Object callApi(@NonNull ParticleCloud harscloud) throws ParticleCloudException, IOException {
                                 harscloud.logIn(email, pass);
                                 harscloud.getDevices();
-                                ParticleCloudSDK.getCloud().setAccessToken("ac82f902d546a19b044e8c7b32c46e73d0a2fea3");
-                                mDevice = harscloud.getDevice("7ab711eb09279cbea70d7936");
+                                ParticleCloudSDK.getCloud().setAccessToken("xxxxxxxxxxxxxxxxxxxxx");
+                                mDevice = harscloud.getDevice("xxxxxxxxxxxxxxx");
                                 Object obj;
                                 ParticleCloudSDK.getCloud().publishEvent("Light_Off", "",
                                         ParticleEventVisibility.PUBLIC, 60);
