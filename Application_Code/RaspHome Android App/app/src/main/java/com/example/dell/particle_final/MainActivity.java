@@ -73,10 +73,10 @@ public class MainActivity extends AppCompatActivity {
                         private ParticleDevice mDevice;
 
                         @Override
-                        public Object callApi(@NonNull ParticleCloud sparkCloud) throws ParticleCloudException, IOException {
-                            sparkCloud.logIn(email, password);
-                            sparkCloud.getDevices();
-                            mDevice = sparkCloud.getDevice("7ab711eb09279cbea70d7936");
+                        public Object callApi(@NonNull ParticleCloud harsCloud) throws ParticleCloudException, IOException {
+                            harsCloud.logIn(email, password);
+                            harsCloud.getDevices();
+                            mDevice = harsCloud.getDevice("7ab711eb09279cbea70d7936");
                             Object obj;
 
 
