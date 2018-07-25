@@ -4,50 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d8f8f3"
     tools:context=".MainActivity">
 
+   <TextView
+       android:id="@+id/wel"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="20dp"
+       android:fontFamily="cursive"
+       android:text="Get Connected to Your Particle Devices"
+       android:textColor="@color/cred"
+       android:textSize="20dp"
+       android:textStyle="italic" />
 
-    <TextView android:id="@+id/wel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="cursive"
-        android:textStyle="italic"
-        android:textColor="#dc143c"
-        android:textSize="20dp"
-        android:text="Get Connected to Your Particle Devices"
+   <EditText
+       android:id="@+id/email"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="119dp"
+       android:fontFamily="sans-serif"
+       android:hint="Enter Username"
+       android:textColor="#c98496"
+       android:textColorHint="@color/red"
+       android:textSize="20dp" />
 
-        android:layout_centerHorizontal="true"/>
-    <EditText android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:hint="Enter Username"
-        android:layout_below="@+id/wel"
-        android:fontFamily="sans-serif"
-        android:textColorHint="#c98496"
-        android:textSize="20dp"
-        android:textColor="#c98496"
-        android:layout_centerHorizontal="true"/>
+   <EditText
+       android:id="@+id/pass"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="178dp"
+       android:fontFamily="sans-serif"
+       android:hint="Enter Password"
+       android:inputType="textPassword"
+       android:textColorHint="@color/red"
+       android:textSize="20dp" />
 
-    <EditText android:id="@+id/pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/email"
-        android:textColorHint="#c98496"
-        android:hint="Enter Password"
-        android:fontFamily="sans-serif"
-        android:layout_centerHorizontal="true"
-        android:textSize="20dp"/>
-    <Button android:id="@+id/login_button"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/pass"
-        android:text="Login to Particle Cloud"
-        android:layout_marginTop="10dp"
-        android:background="#bb0a1e"
-android:textColor="#ffff"
-        android:layout_centerHorizontal="true"/>
+   <Button
+       android:id="@+id/login_button"
+       android:layout_width="250dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/pass"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="20dp"
+       android:background="@color/red"
+       android:text="Login to Particle Cloud"
+       android:textColor="#fff" />
 
 
 

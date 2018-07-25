@@ -4,27 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity">
-    <TextView android:id="@+id/on"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:drawableLeft="@drawable/on"
-        android:text="Say 'Lights On'"
-        android:fontFamily="serif-monospace"
-        android:textSize="20dp"
-        android:textColor="#008080"
-       />
-    <TextView android:id="@+id/off"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/off"
-        android:text="Say 'Lights Off'"
-        android:fontFamily="serif-monospace"
-        android:textSize="20dp"
-        android:textColor="#008080"
-        android:layout_below="@+id/on"/>
+    tools:context=".Main2Activity"
+    android:background="#000">
     <TextView
         android:id="@+id/txvResult"
         android:layout_width="wrap_content"
@@ -32,16 +13,42 @@
         android:layout_centerHorizontal="true"
         android:textSize="20dp"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_below="@+id/off"/>
+        />
+
+    <Switch
+        android:id="@+id/swi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="135dp"
+        android:layout_marginStart="64dp"
+        android:background="@drawable/custo" />
+
+
+    <ImageView android:id="@+id/img"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+
+        android:src="@drawable/lighton"
+        android:layout_below="@+id/txvResult"
+        android:layout_centerHorizontal="true"
+        />
+
+
     <ImageView
         android:id="@+id/btnSpeak"
         android:layout_width="100dp"
         android:layout_height="100dp"
+
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="102dp"
+        android:layout_marginEnd="64dp"
         android:gravity="center"
         android:onClick="getSpeechInput"
-        android:src="@drawable/ic_mic"/>
+        android:src="@drawable/ic_mic" />
+
+
 
 </RelativeLayout>
