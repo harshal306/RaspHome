@@ -1,0 +1,129 @@
+{% extends 'RaspHome/header.html' %}
+
+
+{% block content%}
+<!-- Header with Slideshow -->
+<header class="w3-display-container w3-center">
+  <button class="w3-button w3-block w3-green w3-hide-large w3-hide-medium" onclick="document.getElementById('download').style.display='block'">Download <i class="fa fa-android"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"></i></button>
+  <div class="mySlides w3-animate-opacity">
+    <img class="w3-image" src="/static/RaspHome/img/iot4.jpg" alt="Image 1" style="min-width:500px" width="1500" height="1000">
+    <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
+      <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
+        <h1 class="w3-xlarge">Control Appliance with our App</h1>
+        <hr class="w3-opacity">
+        <p>Simple installation: free of charge</p>
+        <p><button class="w3-button w3-block w3-green w3-round" onclick="document.getElementById('download').style.display='block'">Download <i class="fa fa-android"></i></button></p>
+      </div>
+    </div>
+  </div>
+  <div class="mySlides w3-animate-opacity">
+    <img class="w3-image" src="/static/RaspHome/img/iot7.jpg" alt="Image 2" style="min-width:500px" width="1500" height="1000">
+    <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
+      <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
+        <h1 class="w3-xlarge w3-text-red"><b>Voice Enabled</b> Fast and Easy</h1>
+        <hr class="w3-opacity">
+        <p>Simple Keywords to Control the Appliance</p>
+        <p><button class="w3-button w3-block w3-red w3-round" onclick="document.getElementById('download').style.display='block'">Download <i class="fa fa-android"></i></button></p>
+      </div>
+    </div>
+  </div>
+  <div class="mySlides w3-animate-opacity">
+    <img class="w3-image" src="/static/RaspHome/img/iot.jpg" alt="Image 3" style="min-width:500px" width="1500" height="1000">
+    <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
+      <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
+        <h1 class="w3-xlarge">Smart Artificial Intelligence Design</h1>
+        <hr class="w3-opacity">
+        <p>Customize your Room</p>
+        <p><button class="w3-button w3-block w3-indigo w3-round" onclick="document.getElementById('download').style.display='block'">Download <i class="fa fa-android"></i></button></p>
+      </div>
+    </div>
+  </div>
+  <a class="w3-button w3-black w3-display-right w3-margin-right w3-round w3-hide-small w3-hover-light-grey" onclick="plusDivs(1)">Take Tour <i class="fa fa-angle-right"></i></a>
+  <a class="w3-button w3-block w3-black w3-hide-large w3-hide-medium" onclick="plusDivs(1)">Take Tour <i class="fa fa-angle-right"></i></a>
+</header>
+
+<!-- The App Section -->
+<div class="w3-padding-64 w3-white">
+  <div class="w3-row-padding">
+    <div class="w3-col 4 m4">
+		<br/><br/><br/>
+		<img class="w3-image w3-round-large w3-hide-small w3-grayscale" src="/static/RaspHome/img/iot8.jpg" alt="App" width="335" height="471" style="height:250px; padding-left:px; padding-top:px;padding-bottom:px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 40px 0 rgba(0, 0, 0, 0.19)">
+	</div>
+    <div class="w3-col 4 m4">
+      <!--<img src="/static/RaspHome/img/iot4.jpg" class="w3-image w3-right w3-hide-small" width="335" height="471">-->
+	  
+	  <div class="container">
+	  <h1 class="w3-jumbo"><b>Welcome!</b></h1>
+		User:<strong>
+		
+		{% for data in Credentials %}
+			{% if data == 'hrshlmittal306@gmail.com' %}
+			{{data}}
+			{% endif %}
+
+		{% endfor %}
+		</strong>
+		<br/><br/><br/>
+		<strong> Select to turn On/Off your Appliance.<strong><br/><br/>
+		{% for data in Credentials %}
+			{% if data != 'hrshlmittal306@gmail.com' %}
+			<form class="form-horizontal" action= 'https://api.particle.io/v1/devices/events?access_token={{data}}' method="POST"/>
+			{% endif %}
+		{% endfor %}
+		
+		<div class="form-check">
+			<input class="form-check-input" name="name" type="radio" id="radio100" value = "Light_On">
+			<label class="form-check-label" for="radio100"> Turn the Appliance On:</label>
+		</div>
+
+		<div class="form-check">
+			<input class="form-check-input" name="name" type="radio" id="radio101" value = "Light_Off" >
+			<label class="form-check-label" for="radio101"> Turn the Appliance Off:</label>
+		</div><br/>
+		<div class="form-group">        
+			<div class="col-sm-offset-0 col-sm-10">
+				<button type="submit" class="btn btn-primary">Do it!</button>
+			</div>
+		</div>
+	</form>
+	<h4>Want to Contribue? Click <a href = "https://harshal306.github.io/RaspHome">Here</a></h4>
+		
+	</div>
+      
+    </div>
+	<div class="w3-col 4 m4">
+		
+		<form action = "logout_action" method = "GET">{% csrf_token %}
+		<Button class = "btn btn-primary" type = "submit" name = "log_out"/><strong class = "glyphicon glyphicon-off"> Logout</strong></button>
+	
+	</div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="download" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('download').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
+      <h2 class="w3-wide">DOWNLOAD</h2>
+      <p>Download the app from Google Play.</p>
+      <i class="fa fa-android w3-large"></i>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('download').style.display='none'">Download</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-xlarge">
+  <div class="w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+	<i class="fa fa-github w3-hover-opacity"></i>
+  </div>
+  <p class="w3-medium">Designed and Developed by<br/><a href="https://www.linkedin.com/in/harshal306" target="_blank" class="w3-hover-text-green">Harshal Mittal</a></p>
+</footer>
+
+
+{% endblock %}
