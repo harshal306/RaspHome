@@ -10,6 +10,8 @@
 * Jumper Wires and other Guage Wires.
 * Appliance (eg. Bulb or Fan)
 * 5V Power Supply
+* Django Environment to Run WebSite for RaspHome
+* Android version > 4 to control through the app.
 
 ## Installation
 
@@ -41,7 +43,7 @@ put your subscribe element name in the Publish Event console.
 
 #### 2. Through Web page
 
-Check out the HTML page in this repository and change the Access_token to your original access token for particle cloud and execute it to control the respective applicance.
+Check out the Django Developmet Environment page in this repository and change the Access_token to your original access token for particle cloud and execute it to control the respective applicance.
   
 #### 3. Self-Developed App RaspHome
 
@@ -53,8 +55,14 @@ Download the App RaspHome From PlayStore and put the login Credentials into it a
 Just ask what you have written in the IFTTT "if" phrase. "then" phrase automaically be executed.
 
 #### 2. Control your Appliance by RaspHome Web Page
-visit [This page](http://htmlpreview.github.io/?https://github.com/harshal306/RaspHome/blob/master/Application_Code/Web%20Page/RaspHome_Controller.html) 
-(make sure that your have entered your Access_Token and Event name [here](https://github.com/harshal306/RaspHome/blob/master/Application_Code/Web%20Page/RaspHome_Controller.html))
+Make sure you have Django installed on your system!.
+Just Change the directory to the RaspHome Web page Environment.
+
+```
+$ python manage.py runserver
+```
+Execute the above command and run the website on web browser with url as [localhost:8000](localhost:8000).
+(make sure that your have entered your Access_Token and Event name )
 
 #### 3. Control your Appliance by RaspHome Android App.
 
